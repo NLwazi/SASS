@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:tab="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms" xmlns:viewmodels="clr-namespace:SASS.ViewModels"
+             x:Class="SASS.Views.TabView">
+    <ContentPage.BindingContext>
+        <viewmodels:TabViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <tab:SfTabView BackgroundColor="{StaticResource Tab_foreGround}" Items="{Binding sfTabItems}" EnableVirtualization="True" EnableSwiping="False" DisplayMode="Image" TabHeaderPosition="Bottom">
+            
+        </tab:SfTabView>
+    </ContentPage.Content>
+</ContentPage>

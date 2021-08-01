@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:authentication="clr-namespace:SASS.Views.Authentication"
+       xmlns:local="clr-namespace:SASS.Views"
+       Title="SASS"
+       x:Class="SASS.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource SASS_Default_back}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Tab_Background}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Tab_foreGround}"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+    
+    
+
+    <TabBar>
+
+        <ShellContent Title="Login" Route="LoginPage" ContentTemplate='{DataTemplate authentication:LoginPage}' />
+
+        
+        
+
+    </TabBar>
+
+
+    <TabBar>
+        <ShellContent Title="SignIn" Route="SignInPage" ContentTemplate="{DataTemplate authentication:SignInPage}" />
+    </TabBar>
+
+    <TabBar>
+        <ShellContent Title="TabView" Route="TabView" ContentTemplate="{DataTemplate local:TabView}" />
+    </TabBar>
+
+
+</Shell>

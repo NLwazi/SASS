@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:authenticationvm="clr-namespace:SASS.ViewModels.AuthenticationVM"
+             Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False" BackgroundColor="{StaticResource SASS_Default_back}"
+             x:Class="SASS.Views.Authentication.LoginPage">
+    <ContentPage.BindingContext>
+        <authenticationvm:LoginViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+    
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Row="1" BackgroundColor="Transparent" >
+
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+
+
+
+                    <Label Text="Login" TextColor="{StaticResource SASS_Default_contrast}" HorizontalOptions="Center" FontSize="20" />
+
+
+                    <!--Login Form-->
+                    <Frame Padding="0" BackgroundColor="{StaticResource SASS_Default_back}" Grid.Row="1" >
+                        <Grid >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                
+                                <RowDefinition Height="Auto" />
+                                
+                                
+                            </Grid.RowDefinitions>
+
+
+                            <Frame Padding="0" BackgroundColor="{StaticResource SASS_Default_1}" >
+
+                                <StackLayout Spacing="15">
+                                    <Entry Style="{StaticResource entryStyle}" PlaceholderColor="{StaticResource SASS_Default_1}" Text="{Binding Username}" Placeholder="Email" />
+
+                                    <Entry Style="{StaticResource entryStyle}" PlaceholderColor="{StaticResource SASS_Default_1}" Text="{Binding Password}" Placeholder="Email" />
+
+
+                                </StackLayout>
+                                
+                            </Frame>
+
+                            <Frame Padding="0" BackgroundColor="Transparent" Grid.Row="1" >
+
+                                <Button BackgroundColor="{StaticResource SASS_Default_3}" Text="Login" TextColor="{StaticResource SASS_Default_back}" />
+
+                            </Frame>
+                            
+                            
+                            
+                        </Grid>
+                        
+                    </Frame>
+
+
+                    <Frame Padding="0" BackgroundColor="Transparent" Grid.Row="2" >
+                        <Button Text="Create an account" TextColor="{StaticResource SASS_Default_contrast}" Command="{Binding SignIn}" HorizontalOptions="Center" />
+
+                    </Frame>
+
+
+                </Grid>
+                
+            </Frame>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

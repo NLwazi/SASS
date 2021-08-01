@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SASS.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="SASS_Default_back" >#fff</Color>
+            <Color x:Key="SASS_Default_contrast" >#101010</Color>
+            <Color x:Key="SASS_Default_1" >#c4c4c4</Color>
+            <Color x:Key="SASS_Default_2" >#e6d2d4</Color>
+            <Color x:Key="SASS_Default_3" >#ff7a8a</Color>
+
+            <!--Tab Set-->
+
+            <Color x:Key="Tab_Background" >#191919</Color>
+            <Color x:Key="Tab_foreGround" >#fff</Color>
+
+
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#332196F3" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+
+            <!--Entry-->
+
+            <Style TargetType="Entry" x:Key="entryStyle" >
+
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="BackgroundColor" Value="{StaticResource SASS_Default_2}" />
+                
+
+
+            </Style>
+
+
+
+
+
+
+
+
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
